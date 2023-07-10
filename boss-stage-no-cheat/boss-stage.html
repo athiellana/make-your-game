@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../boss-stage-no-cheat/boss-stage.css">
+    <link rel="icon" href="/img/spaceship_icon.png">
+    <title>Space Heroes</title>
+</head>
+<body>
+    <div class="wrap">  
+        <div class="game-wrapper">
+            <div class="game">
+                <progress id="boss-life" value="30" max="30" min="0"></progress>
+                <div class="congratulations">
+                    <form action="/start-menu/templates/index.html">
+                        <button class="btn_menu"></button> 
+                    </form>
+                    <button class="btn_tryagainWin" onclick="window.location.reload()"></button>
+                </div>
+                <div class="game-over">
+                    <button class="btn_tryagain" onclick="window.location.reload()"></button>
+                </div>
+                <div class="game-paused">
+                    <button class="btn_restart" onclick="window.location.reload()"></button>
+                    <button id="continue" class="btn_continue" onclick="resumeGame()"></button>
+                </div>
+                <img id="bottom-border" src="/img/Backgrounds/bottom-border.jpeg" alt="bottom-border">
+                <img id="top-border" src="/img/Backgrounds/bottom-border.jpeg" alt="bottom-border">
+                <img id="left-border" src="/img/Backgrounds/side-border.png" alt="left-border">
+                <img id="rigth-border" src="/img/Backgrounds/rigth border.png" alt="rigth-border">
+                <span id="fps">--</span></div>
+                <span id="timer">--</span></div>
+                <span id="score">--</span></div>
+            </div>
+        </div>
+        <footer id="footer">Left/rigth keys to moove Space to shoot</footer>
+    </div>
+    <script src="../boss-stage-no-cheat/boss-stage.js"></script>
+</body>
+</html>

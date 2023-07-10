@@ -1,0 +1,15 @@
+.congratulations {
+    display:block;
+    z-index: 10;
+    position: absolute;
+    background: url(../img/Backgrounds/game-win/background-game-win.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    box-shadow: 0 2px 10px black;
+    border-radius: 10px;
+    text-align: center;
+    animation: progressive-scale 1.5s;
+    width: 1825px;
+    height: 950px;
+}

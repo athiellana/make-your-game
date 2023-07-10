@@ -1,0 +1,57 @@
+body {
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: url("../img/Backgrounds/background_V2.png");
+    animation: scroll-background 10s linear infinite;
+    position: relative;
+}
+
+.blabla {
+    z-index: 2;
+    
+    width: 1450px;
+    max-width: 1450px;
+    height: 250px;
+    background: linear-gradient(rgb(226, 54, 212), rgb(204, 45, 183), rgb(236, 90, 188));
+    border-radius: 15px;
+    font-family:goodtiming;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.capitaine {
+    z-index: 1;
+    /* width: 43vw; */
+    height: 70vh;
+    display: flex;
+    position: absolute;
+    top: 9vh;
+    left: 20vh;
+}
+
+.button_next {
+    z-index: 0;
+    position: absolute;
+}
+
+button {
+    height: 5vh;
+    width: 8vw;
+}
+
+@font-face {
+    font-family: goodtiming;
+    src: url(/assets/Font/good_timing.ttf);
+}
+
+@keyframes scroll-background {
+    from {
+        background-position-y:top ;
+    }
+    to {
+        background-position-y: bottom;
+    }
+}

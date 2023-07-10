@@ -1,0 +1,15 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.button_play {
+    z-index: 3;
+    background-image: url(../img/Backgrounds/button-start.png);
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    transform: translate(650px, 400px);
+}

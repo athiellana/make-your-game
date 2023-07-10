@@ -1,0 +1,289 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    font: 16px, "sans-serif";
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    z-index: 8;
+    height: 100%;
+}   
+
+header {
+    text-align: center;
+    background: black;
+    color: #fff;
+    padding: 10px;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    font-size: 11px;
+    background: black;
+    color: white;
+}
+
+.game-wrapper {
+    z-index: 14;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+.game {
+    width: 1450px;
+    height: 850px;
+    z-index: 14;
+    background: url("img/Backgrounds/blue.png");
+    box-shadow: 0 2px 10px black;
+    animation: scroll-background 10s linear infinite;
+    position: relative;
+}
+
+@keyframes scroll-background {
+    from {
+        background-position-y:top ;
+    }
+    to {
+        background-position-y: bottom;
+    }
+}
+.cheat {
+    background: url(./img/Backgrounds/cheat_detected.jpg);
+    background-position: center;
+    filter: blur(2px);
+    animation: bug-effect 1s infinite;
+}
+@keyframes bug-effect {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.game .enemy {
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -18px;
+    width: 100px;
+    left: 230px;
+    bottom: 820px;
+} 
+
+.game .player {
+    position: absolute;
+    margin-left: -20px;
+    width: 75px;
+    bottom: 25px;
+}
+
+.game .laser {
+    position: absolute;
+    margin-left: 12px;
+    height: 40px;   
+    bottom: 28px;
+}
+
+.game .enemy-laser {
+    position: absolute;
+    margin-left:12px;
+    height: 40x;
+    left: 230px;
+}
+
+.game .life {
+    position: absolute;
+    z-index: 10;
+    height: 40px;
+}
+
+
+.congratulations {
+    display: none;
+    z-index: 10;
+    position: absolute;
+    background: url(./img/Backgrounds/game-win/background-game-win.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    box-shadow: 0 2px 10px black;
+    border-radius: 10px;
+    text-align: center;
+    animation: progressive-scale 1.5s;
+    width: 1450px;
+    height: 850px;
+}
+
+.game-paused {
+    display: none;
+    z-index: 8;
+    position: absolute;
+    background: url(./img/Backgrounds/Pause/pause_menu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    box-shadow: 0px 2px 10px black;
+    border-radius: 10px;
+    text-align: center;
+    width: 1450px;
+    height: 850px;
+}
+
+.game-over {
+    display: none; 
+    z-index: 8;
+    position: absolute;
+    background: url(img/Backgrounds/game-over/menu_gameover.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: progressive-scale 1.5s;
+    color: white;
+    box-shadow: 0 2px 10px black;
+    border-radius: 10px;
+    text-align: center;
+    width: 1450px;
+    height: 850px;
+}
+
+@keyframes progressive-scale {
+    0% {opacity: 0%; transform: scale(0px);}
+    10% {opacity: 10%; transform: scale(100px);}
+    20% {opacity: 20%; transform: scale(250px);}
+    30% {opacity: 30%; transform: scale(400px);}
+    40% {opacity: 40%; transform: scale(550px);}
+    50% {opacity: 50%; transform: scale(700px);}
+    60% {opacity: 60%; transform: scale(900px);}
+    70% {opacity: 70%; transform: scale(1050px);}
+    80% {opacity: 80%; transform: scale(1200px);}
+    90% {opacity: 90%; transform: scale(1390px);}
+    100% {transform: scale(1500px);}
+}
+
+.btn_restart {
+    background-image: url(./img/Backgrounds/Pause/restart_button.png);
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    transform: translate(-240px, 300px);
+}
+
+.btn_continue {
+    background-image: url(./img/Backgrounds/Pause/continue_button.png);
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    transform: translate(-240px, 500px);
+}
+
+.btn_tryagain {
+    background-image: url(./img/Backgrounds/game-over/button_tryagain.jpeg);
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    transform: translate(-240px, 400px);
+}
+
+.btn_tryagainWin {
+    background-image: url(./img/Backgrounds/game-win/button-restart.jpeg);
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    transform: translate(-240px, 300px);
+}
+
+.btn_menu {
+    background-image: url(./img/Backgrounds/game-win/button-menu.jpeg);
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    transform: translate(-240px, 500px);
+}
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+        transform: translate(0, -100px);
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        transform: translate(0, 30px);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+#fps {
+    position: absolute;
+    transform: translate(1400px, 10px);
+    z-index: 10;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+#timer {
+    position: absolute;
+    z-index: 20;
+    transform: translate(830px, -400px);
+    font-size: 50px;
+    color:white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#score {
+    position: absolute;
+    z-index: 20;
+    transform: translate(70px, 60px);
+    color: lightpink;
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#bottom-border {
+    position: absolute;
+    transform: translate(-200px, 845px);
+    z-index: 12;
+
+    width: 2000px;
+}
+
+#top-border {
+    position: absolute;
+    z-index: 12;
+    transform: translate(-200px, -135px);
+    width: 2000px;
+}
+
+#left-border {
+    z-index: 0;
+    width: 1680px;
+    height: 1200px;
+    position: absolute;
+    transform: translate(-230px, -200px);
+}
+
+#rigth-border {
+    z-index: 0;
+    width: 1900px;
+    height: 1150px;
+    position: absolute;
+    transform: translate(-203px, -170px);
+}
